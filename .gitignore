@@ -1,1 +1,9 @@
 .vscode/
+
+# colcon build artifacts
+clankus_ws/build/
+clankus_ws/install/
+clankus_ws/log/
+clankus_ws/.ros/
+# docker
+docker/.cache
