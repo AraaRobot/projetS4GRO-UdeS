@@ -77,14 +77,20 @@ docker run -it --rm -v $(pwd):/home/ros/scorpius_ws/src/scorpius scorpius:dev
 docker run --rm -it --name <container_name_optional> -v "C:\your\path\to\repo:/home/ros/scorpius_ws/src/scorpius" scorpius:dev
 ```
 
+To leave the docker, simply type "exit" in the terminal running the docker.
+
 ## Inside the Docker Container
 
-The docker container is running a ros-humble headless image (for now). All dependencies of the project have been installed via the Dockerfile. Two helpers have been included to the build to help with development. 
+The container is running a ros-humble headless image (for now). All dependencies of the project have been installed via the Dockerfile. Two helpers have been included to the build to help with development. 
 
 ###### ROS build:
 The alias "b" can be used in a terminal to build current code
 ###### ROS clean:
 The function "clean" can be used in a terminal to completely rebuild the workspace. It deletes the build/install/log and then proceeds to build it back twice.
+
+## Mounted volume
+
+Thanks to the previous run command, you are able to code and develop the project using your host computer's IDE (See [[VS Code setup]] for setup and recommended extensions of this project). A volume has been mounted between your computer and the docker image, allowing modifications to automatically be sent to the Docker. You'll only need to build and run the project from it.
 
 ## Running the code without Docker
 
