@@ -7,7 +7,7 @@ if [ -f "/opt/ros/${ROS_DISTRO}/setup.bash" ]; then
 fi
 
 # If workspace overlay exists, source it too
-WS_SETUP="/home/${USERNAME}/clankus_ws/install/setup.bash"
+WS_SETUP="/home/${USERNAME}/scorpius_ws/install/setup.bash"
 if [ -f "${WS_SETUP}" ]; then
   source "${WS_SETUP}"
 fi

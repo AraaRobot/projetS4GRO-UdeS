@@ -53,12 +53,12 @@ RUN chmod +x /etc/profile.d/utils.sh
 # Prepare workspace and colcon log directory
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}
-RUN mkdir -p /home/${USERNAME}/clankus_ws/src /home/${USERNAME}/.colcon/log
+RUN mkdir -p /home/${USERNAME}/scorpius_ws/src /home/${USERNAME}/.colcon/log
 
 # Helpful defaults in .bashrc
 RUN { \
   echo "source /opt/ros/${ROS_DISTRO}/setup.bash"; \
-  echo "if [ -f /home/${USERNAME}/clankus_ws/install/setup.bash ]; then source /home/${USERNAME}/clankus_ws/install/setup.bash; fi"; \
+  echo "if [ -f /home/${USERNAME}/scorpius_ws/install/setup.bash ]; then source /home/${USERNAME}/scorpius_ws/install/setup.bash; fi"; \
   } >> /home/${USERNAME}/.bashrc
 
 RUN echo "source /etc/profile.d/utils.sh" >> /home/${USERNAME}/.bashrc
